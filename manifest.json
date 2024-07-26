@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Bing+",
+  "description": "Improve Bing's user interface",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "bplus-icon.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.bing.com/search*"],
+      "css": ["bing.css"],
+      "js": ["content.js"]
+    }
+  ]
+}
