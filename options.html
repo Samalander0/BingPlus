@@ -2,23 +2,101 @@
 <html lang="en">
   <head>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
       body {
-        font-family: monospace;
+        font-family: "Roboto Mono", monospace;
         font-size: 12px;
         padding: 1rem;
+        min-width: 12rem;
       }
       p {
         margin: 0;
       }
       #title {
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      #options {
+        display: flex;
+        flex-direction: column;
+        margin: 0.5rem 0;
+      }
+      #options label {
+        margin: 2px 0;
+        position: relative;
+        padding-left: 30px;
+        text-transform: capitalize;
+
+        input {
+          display: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      #options label::before {
+        content: "";
+        width: 24px;
+        height: 14px;
+        background: gray;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 4px;
+        transition: 0.2s ease;
+      }
+      #options label::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: white;
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 2px;
+        transition: 0.2s ease;
+      }
+      #options label:has(input:checked) {
+        &:before {
+          background: #0019FF;
+        }
+        &:after {
+          transform: translateY(-50%) translateX(100%);
+        }
+      }
+      
+      #save {
+        border-radius: 0;
+        border: none;
+        background: black;
+        font: inherit;
+        color: white;
+        padding:  0.5em 1em;
+        margin-top: 0.25rem;
+        border-radius: 4px;
+
+        transition: 0.2s ease;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+
+      #save-info {
+        display: block;
+        margin-top: 4px;
       }
     </style>
   </head>
   <body>
     <p id="title">Options:</p>
-    <div id="options">
-
-    </div>
+    <div id="options"></div>
+    <button id="save">Save</button>
+    <small id="save-info"></small>
+    <script src="options.js"></script>
   </body>
 </html>

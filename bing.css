@@ -1,5 +1,15 @@
-.hide_related_searches #rs_lgw_list {
-  background: blue;
+.bp-hide_related_searches #relatedSearchesLGWContainer {
+  display: none !important;
 }
 
-/*# sourceMappingURL=bing.css.map */
+.bp-hide_web_tags .algoSlug_icon, .bp-hide_web_tags .webSlug {
+  display: none !important;
+}
+
+.bp-highlight_ads .b_algo .b_caption p::before {
+  background: #F87171 !important;
+}
+
+.bp-hide_lock_icon :has(cite) .lcksb {
+  display: none;
+}
