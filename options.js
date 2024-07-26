@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const settings = ['hide_related_searches', 'hide_web_tags', 'highlight_ads', 'make_ads_transparent', 'hide_lock_icon'];
+  const settings = ['hide_related_searches', 'hide_web_tags', 'hide_ads', 'highlight_ads', 'make_ads_transparent', 'hide_lock_icon', 'hide_also_try', 'hide_microsoft_cashback', 'hide_mobile', 'hide_promoted_by_microsoft_results'];
   const optionsContainer = document.getElementById('options');
   const info = document.getElementById('save-info')
 

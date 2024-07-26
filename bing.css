@@ -6,10 +6,31 @@
   display: none !important;
 }
 
-.bp-highlight_ads .b_algo .b_caption p::before {
-  background: #F87171 !important;
+.bp-highlight_ads .b_caption p::before, .bp-highlight_ads .b_adSlug {
+  background: #DC2626 !important;
+  padding: 4px 6px !important;
+  border-radius: 2px !important;
+  border: none !important;
+  vertical-align: 1px !important;
+  color: white !important;
+  font-weight: 600 !important;
+  margin-right: 4px !important;
 }
+
+.bp-make_ads_transparent li:has(.b_adTopIcon_container) {
+  opacity: 0.5 !important;
+}
+
+
 
 .bp-hide_lock_icon :has(cite) .lcksb {
   display: none;
+}
+
+.bp-hide_ads li:has(.b_adTopIcon_container),
+.bp-hide_promoted_by_microsoft_results .b_ans:has(.xm_mlt_msftLogo),
+.bp-hide_also_try #b_alsotry,
+.bp-hide_microsoft_cashback #id_rfob,
+.bp-hide_mobile #id_mobile {
+  display: none !important;
 }
