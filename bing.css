@@ -31,6 +31,7 @@
 .bp-hide_promoted_by_microsoft_results .b_ans:has(.xm_mlt_msftLogo),
 .bp-hide_also_try #b_alsotry,
 .bp-hide_microsoft_cashback #id_rfob,
-.bp-hide_mobile #id_mobile {
+.bp-hide_mobile #id_mobile,
+.bp-hide_feedback_prompt .fdbk_thmb_root {
   display: none !important;
 }
